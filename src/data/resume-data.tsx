@@ -72,7 +72,8 @@ export const RESUME_DATA = {
         "Consulting startups and product teams in LLMs, AI pipelines, and product management",
     },
     {
-      company: "Chattterbox",      
+      company: "Chattterbox",
+      link: "",      
       badges: ["Remote"],
       title: "Co-founder",
       logo: ClevertechLogo,
