@@ -1,3 +1,4 @@
+/** @jsxImportSource react */
 import {
   ClevertechLogo,
   ConsultlyLogo,
@@ -7,235 +8,127 @@ import {
   ParabolLogo,
 } from "@/images/logos";
 import { GitHubIcon, LinkedInIcon, XIcon } from "@/components/icons";
+import React from 'react';
 
 export const RESUME_DATA = {
-  name: "Bartosz Jarocki",
-  initials: "BJ",
-  location: "Wrocław, Poland, CET",
-  locationLink: "https://www.google.com/maps/place/Wrocław",
-  about:
-    "Detail-oriented Full Stack Engineer dedicated to building high-quality products.",
+  name: "Evan Chesnokov",
+  initials: "EC",
+  location: "Tbilisi, Georgia",
+  locationLink: "https://www.google.com/maps/place/Tbilisi",
+  // about:
+  //   "AI product manager, coding enthusiast, ex-founder of the GenAI startup",
   summary: (
     <>
-      Frontend-focused Full Stack Engineer specializing in high-performance
-      React applications, scalable Node.js services, and real-time collaboration
-      systems. Experienced in technical architecture design and remote team
-      leadership.
+      AI specialist skilled in prompt engineering and LLM application development. I build and launch AI products from 0→1, 
+      with expertise in both technical implementation and product strategy. Self-taught dev comfortable coding full-stack 
+      applications (TypeScript, React, Node.js) and launching experiments (Python, Jypiter Notebooks, etc.) while also leading teams to deliver production-ready MVPs.
     </>
   ),
-  avatarUrl: "https://avatars.githubusercontent.com/u/1017620?v=4",
-  personalWebsiteUrl: "https://jarocki.me",
+  avatarUrl: "/evan.png",
   contact: {
-    email: "bartosz.jarocki@hey.com",
-    tel: "+48530213401",
+    email: null,
     social: [
       {
         name: "GitHub",
-        url: "https://github.com/BartoszJarocki",
+        url: "https://github.com/chesnokovivan",
         icon: GitHubIcon,
       },
       {
         name: "LinkedIn",
-        url: "https://www.linkedin.com/in/bjarocki/",
+        url: "https://www.linkedin.com/in/evan-chesnokov",
         icon: LinkedInIcon,
-      },
-      {
-        name: "X",
-        url: "https://x.com/BartoszJarocki",
-        icon: XIcon,
       },
     ],
   },
   education: [
     {
-      school: "Wrocław University of Technology",
-      degree: "Bachelor's Degree in Control systems engineering and Robotics",
-      start: "2007",
-      end: "2010",
+      school: "Saint Petersburg State University",
+      degree: "Physics",
+      start: "2010",
+      end: "2012",
+      description: "None, dropped out",
     },
   ],
   work: [
     {
-      company: "Film.io",
-      link: "https://film.io",
-      badges: ["Remote", "React", "Next.js", "TypeScript", "Node.js"],
-      title: "Software Architect",
-      logo: ConsultlyLogo,
+      company: "Novakid",
+      link: "https://www.novakidschool.com/",
+      badges: ["AI", "Prompt Engineering", "Fine-tuning"],
+      title: "Consultant",
       start: "2024",
-      end: null,
+      end: "Present",
+      description: "Working directly with the CTO: research, design, implementation, and launch of AI-powered MVPs",
+    },
+    {
+      company: "skl.vc",
+      link: "https://skl.vc",
+      badges: ["Remote", "AI", "LLMs"],
+      title: "Senior Prompt Engineer",
+      start: "2024",
+      end: "2025",
       description: (
         <>
-          Leading technical architecture of a blockchain-based film funding
-          platform.
+          Built the LLM part of the AI Recruiter called <a href="https://aivy.cc/" target="_blank" rel="noopener noreferrer">Aivy.cc</a>, a startup that helps companies find candidates for their open positions.
+        </>
+      ),
+    },
+    {
+      company: "AI Applied Consultant",
+      link: "https://evanchesnokov.com/",
+      badges: ["AI", "Product Management"],
+      title: "Founder",
+      start: "2022",
+      end: "Present",
+      description: (
+        <>
+          Consulting startups and product teams in LLMs, AI pipelines, and product management. <br />
+          Clients: Kaspersky, Sber, Neiro, etc.
+        </>
+      ),
+    },
+    {
+      company: "Chattterbox",
+      link: "https://chatterbox.one/",
+      badges: ["Remote", "AI", "LLMs", "Product"],
+      title: "Co-founder",
+      start: "2023",
+      end: "2023",
+      description: (
+        <>
           <ul className="list-inside list-disc">
-            <li>
-              Architecting migration from CRA to Next.js for improved
-              performance, SEO, and DX
-            </li>
-            <li>
-              Established release process enabling faster deployments and
-              reliable rollbacks
-            </li>
-            <li>
-              Implementing system-wide monitoring and security improvements
-            </li>
+            <li>Chatterbox is an AI chatting assistant for niche content creators</li>
+            <li>Spearheaded product, design, marketing, finetuning and fundraising for a LLM-powered product</li>
+            <li>Drove 7% week-over-week organic user growth and scaled revenue to $3K monthly</li>
+            <li>Achieved a 37% user retention rate and implemented AI text and voice generation technologies</li>
           </ul>
         </>
       ),
     },
     {
-      company: "Parabol",
-      link: "https://parabol.co",
-      badges: [
-        "Remote",
-        "React",
-        "TypeScript",
-        "Node.js",
-        "GraphQL",
-        "Tailwind CSS",
-      ],
-      title: "Senior Full Stack Developer",
-      logo: ParabolLogo,
-      start: "2021",
-      end: "2024",
-      description: (
-        <>
-          Senior developer and squad leader for an enterprise agile meeting
-          platform.
-          <ul className="list-inside list-disc">
-            <li>
-              Built design system with Tailwind CSS, improving development speed
-              and time to market
-            </li>
-            <li>
-              Implemented engineering practices: PR automation, code review
-              guidelines, and workflows
-            </li>
-            <li>
-              Open source contributions to Relay DevTools and React i18n tooling
-            </li>
-          </ul>
-        </>
-      ),
+      company: "Replika",
+      link: "https://replika.ai",
+      badges: ["Remote", "AI", "Product Management"],
+      title: "Senior Product Manager",
+      start: "2022",
+      end: "2022",
+      // description: "Launched a new AI product for business customers in 3,5 months with its own API resulting in 20M+ end users",
     },
     {
-      company: "Clevertech",
-      link: "https://clevertech.biz",
-      badges: ["Remote", "React", "TypeScript", "Node.js", "Android", "Kotlin"],
-      title: "Lead Android Developer → Full Stack Developer",
-      logo: ClevertechLogo,
-      start: "2015",
+      company: "TripleTen",
+      link: "https://tripleten.com",
+      badges: ["Product Management", "UX Research"],
+      title: "Product Manager",
+      start: "2020",
       end: "2021",
-      description: (
-        <>
-          Successfully transitioned from mobile to full-stack development while
-          leading distributed teams.
-          <ul className="list-inside list-disc">
-            <li>
-              Led frontend team at Evercast, building real-time platform
-              supporting 30+ users per room with HD streaming and collaboration
-              tools
-            </li>
-            <li>
-              Developed offline-first Android app for DKMS, improving donor
-              registration process
-            </li>
-            <li>
-              Led development teams across multiple successful client projects
-            </li>
-          </ul>
-        </>
-      ),
-    },
-    {
-      company: "Jojo Mobile",
-      link: "https://bsgroup.eu/",
-      badges: ["On Site", "Android", "Java", "Kotlin"],
-      title: "Android Developer → Lead Android Developer",
-      logo: JojoMobileLogo,
-      start: "2012",
-      end: "2015",
-      description: (
-        <>
-          First Android developer, grew and led a team of 15+ engineers while
-          establishing engineering culture.
-          <ul className="list-inside list-disc">
-            <li>
-              Developed apps for major Polish companies including LOT, Polskie
-              Radio, and Agora
-            </li>
-            <li>Built and mentored high-performing mobile development team</li>
-          </ul>
-        </>
-      ),
-    },
-    {
-      company: "Nokia Siemens Networks",
-      link: "https://www.nokia.com",
-      badges: ["On Site", "C/C++", "LTE", "Agile"],
-      title: "C/C++ Developer",
-      logo: NSNLogo,
-      start: "2010",
-      end: "2012",
-      description:
-        "Developed software for LTE base stations at enterprise scale, gaining strong fundamentals in software architecture, testing practices, and cross-team collaboration.",
+      // description: "Owned the activation part of the product funnel — increased retention by 4% by directing usability studies and redesigning the main points of the user journey",
     },
   ],
   skills: [
-    "React/Next.js/Remix",
-    "TypeScript",
-    "Tailwind CSS",
-    "Design Systems",
-    "WebRTC",
-    "WebSockets",
-    "Node.js",
-    "GraphQL",
-    "Relay",
-    "System Architecture",
-    "Remote Team Leadership",
+    "Founder experience",
+    "Generative NN",
+    "LLMs",
+    "Prompt Engineering",
+    "End-to-end product management"
   ],
-  projects: [
-    {
-      title: "Monito",
-      techStack: ["TypeScript", "Next.js", "Browser Extension", "PostgreSQL"],
-      description:
-        "Browser extension for debugging web applications. Includes taking screenshots, screen recording, E2E tests generation and generating bug reports",
-      logo: MonitoLogo,
-      link: {
-        label: "monito.dev",
-        href: "https://monito.dev/",
-      },
-    },
-    {
-      title: "Consultly",
-      techStack: [
-        "TypeScript",
-        "Next.js",
-        "Vite",
-        "GraphQL",
-        "WebRTC",
-        "Tailwind CSS",
-        "PostgreSQL",
-        "Redis",
-      ],
-      description:
-        "Platform for online consultations with real-time video meetings and scheduling",
-      logo: ConsultlyLogo,
-      link: {
-        label: "consultly.com",
-        href: "https://consultly.com/",
-      },
-    },
-    {
-      title: "Minimalist CV",
-      techStack: ["TypeScript", "Next.js", "Tailwind CSS"],
-      description:
-        "An open source minimalist, print friendly CV template with a focus on readability and clean design. >9k stars on GitHub",
-      logo: MonitoLogo,
-      link: {
-        label: "Minimalist CV",
-        href: "https://github.com/BartoszJarocki/cv",
-      },
-    },
-  ],
+  projects: [],
 } as const;

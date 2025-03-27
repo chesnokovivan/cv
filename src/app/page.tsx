@@ -10,10 +10,10 @@ import { Header } from "./components/Header";
 
 export const metadata: Metadata = {
   title: `${RESUME_DATA.name} - Resume`,
-  description: RESUME_DATA.about,
+  description: RESUME_DATA.name,
   openGraph: {
     title: `${RESUME_DATA.name} - Resume`,
-    description: RESUME_DATA.about,
+    description: RESUME_DATA.name,
     type: "profile",
     locale: "en_US",
     images: [
@@ -28,7 +28,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: `${RESUME_DATA.name} - Resume`,
-    description: RESUME_DATA.about,
+    description: RESUME_DATA.name,
     images: ["https://cv.jarocki.me/opengraph-image"],
   },
 };
@@ -37,14 +37,8 @@ export const metadata: Metadata = {
  * Transform social links for command menu
  */
 function getCommandMenuLinks() {
-  const links = [];
-
-  if (RESUME_DATA.personalWebsiteUrl) {
-    links.push({
-      url: RESUME_DATA.personalWebsiteUrl,
-      title: "Personal Website",
-    });
-  }
+  type Link = { url: string; title: string };
+  const links: Link[] = [];
 
   return [
     ...links,
@@ -80,7 +74,7 @@ export default function ResumePage() {
 
           <Skills skills={RESUME_DATA.skills} />
 
-          <Projects projects={RESUME_DATA.projects} />
+          {/* <Projects projects={RESUME_DATA.projects} /> */}
         </div>
       </section>
 
