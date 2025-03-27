@@ -115,7 +115,12 @@ function ProjectCard({ title, description, tags, link }: ProjectCardProps) {
 }
 
 interface ProjectsProps {
-  projects: (typeof RESUME_DATA)["projects"];
+  projects: {
+    title: string;
+    description: string;
+    techStack: readonly string[];
+    link?: { href: string };
+  }[];
 }
 
 /**
@@ -132,19 +137,23 @@ export function Projects({ projects }: ProjectsProps) {
         role="feed"
         aria-labelledby="side-projects"
       >
-        {projects.map((project) => (
-          <article
-            key={project.title}
-            className="h-full" // Added h-full here
-          >
-            <ProjectCard
-              title={project.title}
-              description={project.description}
-              tags={project.techStack}
-              link={"link" in project ? project.link.href : undefined}
-            />
-          </article>
-        ))}
+        {projects && projects.length > 0 ? (
+          projects.map((project) => (
+            <article
+              key={project.title}
+              className="h-full"
+            >
+              <ProjectCard
+                title={project.title}
+                description={project.description}
+                tags={project.techStack}
+                link={project.link && 'href' in project.link ? project.link.href : undefined}
+              />
+            </article>
+          ))
+        ) : (
+          <p>No projects to display</p>
+        )}
       </div>
     </Section>
   );
