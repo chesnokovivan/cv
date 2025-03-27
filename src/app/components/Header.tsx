@@ -72,7 +72,7 @@ function ContactButtons({ contact, personalWebsiteUrl }: ContactButtonsProps) {
           label="Email"
         />
       )}
-      {contact.tel && (
+      {contact.tel !== undefined && (
         <SocialButton
           href={`tel:${contact.tel}`}
           icon={PhoneIcon}

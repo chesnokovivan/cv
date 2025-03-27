@@ -15,8 +15,9 @@ export const RESUME_DATA = {
   initials: "EC",
   location: "Tbilisi, Georgia",
   locationLink: "https://www.google.com/maps/place/Tbilisi",
-  // about:
-  //   "AI product manager, coding enthusiast, ex-founder of the GenAI startup",
+  about:
+    "AI product manager, coding enthusiast, ex-founder of the GenAI startup",
+  personalWebsiteUrl: "https://evanchesnokov.com/",
   summary: (
     <>
       AI specialist skilled in prompt engineering and LLM application development. I build and launch AI products from 0→1, 
@@ -27,6 +28,7 @@ export const RESUME_DATA = {
   avatarUrl: "/evan.png",
   contact: {
     email: null,
+    tel: null,
     social: [
       {
         name: "GitHub",
